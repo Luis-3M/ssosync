@@ -90,7 +90,7 @@ func (s *syncGSuite) SyncUsers(query string) error {
 		return err
 	}
 
-	activeGoogleUsers, err := s.google.GetUsers(query)
+	activeGoogleUsers, err := s.google.GetUsers(query, s.cfg.UserFilter)
 	if err != nil {
 		return err
 	}
